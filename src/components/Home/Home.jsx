@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Redirect } from "react-router-dom";
 
 import { AuthContext } from "../../contexts/AuthContext/AuthContext";
@@ -9,20 +9,21 @@ const Home = () => {
     const user = useContext(AuthContext);
     const firebase = useContext(BaseContext);
 
+useEffect(()=>{
+console.log(user)
+},[user])
+
     async function signIn(){
         await firebase.signUserIn();
     }
 
     return(
         <div>
-            {
-                user
-                ? <Redirect to="/private" />
-                : <div>
+           <div>
                     <h1>Home page</h1>
                     <button onClick={signIn}>Sign in with Twitter</button>
                 </div>
-            }
+        
         </div>
     )
 }
