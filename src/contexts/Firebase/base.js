@@ -2,12 +2,12 @@ import app from "firebase/app";
 import "firebase/auth";
 
 const firebaseConfig = {
-    apiKey: process.env.apiKey,
-    authDomain: process.env.authDomain,
-    projectId: process.env.projectId,
-    storageBucket: process.env.storageBucket,
-    messagingSenderId: process.env.messagingSenderId,
-    appId: process.env.appId,
+    apiKey: "AIzaSyD80SxwHT8mPkdHH7tBfqhTqk9zzHLxTCI",
+    authDomain: "webhook-5de83.firebaseapp.com",
+    projectId: "webhook-5de83",
+    storageBucket: "webhook-5de83.appspot.com",
+    messagingSenderId: "228260902292",
+    appId: "1:228260902292:web:896d2a192afaae3d18cb81"
   };
 
 class Firebase{
