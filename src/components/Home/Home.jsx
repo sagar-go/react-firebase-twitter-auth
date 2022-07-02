@@ -9,10 +9,6 @@ const Home = () => {
     const user = useContext(AuthContext);
     const firebase = useContext(BaseContext);
 
-useEffect(()=>{
-console.log(user)
-},[user])
-
     async function signIn(){
         await firebase.signUserIn();
     }
